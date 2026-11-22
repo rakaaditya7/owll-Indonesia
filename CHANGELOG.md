@@ -3,6 +3,28 @@
 All notable changes to Owl-L. The newest version is first. The text of a version's section is used
 as the release notes and shown in the in-app update notice.
 
+## [0.4.0](https://github.com/rakaaditya7/owll-Indonesia/compare/v0.4.0...v0.4.0) (2026-11-22)
+
+
+### Features
+
+* caption bar lists in own window, conversation view, live sessions in history ([7156157](https://github.com/rakaaditya7/owll-Indonesia/commit/7156157d650e0d5e43af8361a488b2394869b3f8))
+* configure Indonesian and Dutch language packs with fork dawn-core and updater ([ec07fb1](https://github.com/rakaaditya7/owll-Indonesia/commit/ec07fb169eec36cb839a747fa45f38792906e2ac))
+* Files tab target, glossary highlights, sentence alternatives and glossary page ([d379c4b](https://github.com/rakaaditya7/owll-Indonesia/commit/d379c4bad37d3ad956d35c9db7f9a8eda3cb6d57))
+* Files tab, word alternatives, glossary page and capture improvements ([388d71c](https://github.com/rakaaditya7/owll-Indonesia/commit/388d71c3fd3bc289921b861933307521c6a79909))
+* live captions with a caption bar, shortcut, tray entry and settings ([beeb688](https://github.com/rakaaditya7/owll-Indonesia/commit/beeb68872f83001c21a2e1195fc7d34867ffe60f))
+* multi-file queue, named glossaries, alternatives panel, capture shortcut in text box ([1ee1c3f](https://github.com/rakaaditya7/owll-Indonesia/commit/1ee1c3f68ccabce7a0496a5d75ec01684f86836d))
+* offline dictionary in the word menu, panel and Language packs ([14c4ed1](https://github.com/rakaaditya7/owll-Indonesia/commit/14c4ed1900a6f7ead405371f14f71a5d6864e25c))
+* Quality mode (local AI), Write tab and meeting captions ([747057a](https://github.com/rakaaditya7/owll-Indonesia/commit/747057a6538305fd35a224c5a6ab6b3c009980dd))
+* themed glossary tooltip, alternatives at the bottom and stacked glossary form ([c7cff23](https://github.com/rakaaditya7/owll-Indonesia/commit/c7cff232f247186e8fa4d1e576ab90564a736ded))
+* translate and edit documents with drafts ([a6f5920](https://github.com/rakaaditya7/owll-Indonesia/commit/a6f5920613e8fc5dc2f2afd4812e9f23301c561d))
+
+
+### Bug Fixes
+
+* lighter dev build profile and guarded run scripts ([7156157](https://github.com/rakaaditya7/owll-Indonesia/commit/7156157d650e0d5e43af8361a488b2394869b3f8))
+* v0.1.1 fixes and capture results in the main window ([cbc5b0d](https://github.com/rakaaditya7/owll-Indonesia/commit/cbc5b0d04d08024fa18c15ef39d67cdc11c21df6))
+
 ## [0.4.0](https://github.com/Second-Dawn-Lab/owll/compare/v0.3.0...v0.4.0) (2026-11-13)
 
 
