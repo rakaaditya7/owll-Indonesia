@@ -20,7 +20,7 @@ jobs:
         run: echo "ref=$(grep -v '^#' owll/dawn-core.ref | grep -v '^[[:space:]]*$' | head -n1 | tr -d '[:space:]')" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v7
         with:
-          repository: Second-Dawn-Lab/dawn-core
+          repository: rakaaditya7/dawn-core
           ref: ${{ steps.ref.outputs.ref }}
           path: dawn-core
       - uses: pnpm/action-setup@v6

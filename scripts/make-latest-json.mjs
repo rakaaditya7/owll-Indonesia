@@ -38,7 +38,7 @@ export function plainNotes(markdown) {
     .trim();
 }
 
-export function latestJson({ tag, installerName, signature, notes, now = new Date(), repo = "Second-Dawn-Lab/owll" }) {
+export function latestJson({ tag, installerName, signature, notes, now = new Date(), repo = "rakaaditya7/owll-Indonesia" }) {
   const version = tag.replace(/^v/, "");
   return {
     version,
@@ -66,7 +66,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     process.exit(1);
   }
   mkdirSync(outDir, { recursive: true });
-  const json = latestJson({ tag, installerName: basename(installer), signature: readFileSync(sigFile, "utf8"), notes: plainNotes(notes) });
+  const repo = process.env.GITHUB_REPOSITORY || "rakaaditya7/owll-Indonesia";
+  const json = latestJson({ tag, installerName: basename(installer), signature: readFileSync(sigFile, "utf8"), notes: plainNotes(notes), repo });
   writeFileSync(`${outDir}/latest.json`, `${JSON.stringify(json, null, 2)}\n`);
   writeFileSync(`${outDir}/release-notes.md`, `${notes}\n`);
   console.log(`wrote ${outDir}/latest.json for ${tag}`);

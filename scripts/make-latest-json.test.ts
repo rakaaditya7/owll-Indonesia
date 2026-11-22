@@ -33,7 +33,7 @@ describe("latest.json", () => {
     expect(json.version).toBe("0.1.0");
     expect(json.platforms["windows-x86_64"]).toEqual({
       signature: "SIG",
-      url: "https://github.com/Second-Dawn-Lab/owll/releases/download/v0.1.0/Owl-L_0.1.0_x64-setup.exe",
+      url: "https://github.com/rakaaditya7/owll-Indonesia/releases/download/v0.1.0/Owl-L_0.1.0_x64-setup.exe",
     });
     expect(json.pub_date).toBe("1970-01-01T00:00:00.000Z");
   });

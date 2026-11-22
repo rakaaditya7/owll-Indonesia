@@ -28,13 +28,15 @@ const save = (key: string, value: unknown) => {
 };
 
 const CATALOG = [
+  { code: "id", name: "Indonesian", nativeName: "Bahasa Indonesia", sizeBytes: 130_000_000 },
+  { code: "nl", name: "Dutch", nativeName: "Nederlands", sizeBytes: 130_000_000 },
   { code: "de", name: "German", nativeName: "Deutsch", sizeBytes: 129_428_504 },
   { code: "ur", name: "Urdu", nativeName: "اردو", sizeBytes: 131_255_586 },
   { code: "fr", name: "French", nativeName: "Français", sizeBytes: 130_000_000 },
 ];
 
 /** Installed language codes (persisted so reloads keep them). */
-const installed = (): string[] => load<string[]>("owll.installed", ["de"]);
+const installed = (): string[] => load<string[]>("owll.installed", ["id", "nl"]);
 const downloading = new Map<string, boolean>(); // code -> cancel requested
 
 function languages(): LanguageInfo[] {
@@ -62,7 +64,15 @@ function languages(): LanguageInfo[] {
 function detect(text: string): string | null {
   if (!/\p{L}/u.test(text)) return null;
   const have = ["en", ...installed()];
-  const guess = /\b(der|die|das|und|ist|ich|hallo|wie|geht)\b/i.test(text) ? "de" : /[؀-ۿ]/.test(text) ? "ur" : "en";
+  const guess = /\b(yang|dan|tidak|saya|anda|terima|kasih|halo)\b/i.test(text)
+    ? "id"
+    : /\b(het|een|niet|van|ik|bedankt|dank|goedemorgen)\b/i.test(text)
+      ? "nl"
+      : /\b(der|die|das|und|ist|ich|hallo|wie|geht)\b/i.test(text)
+        ? "de"
+        : /[؀-ۿ]/.test(text)
+          ? "ur"
+          : "en";
   return have.includes(guess) ? guess : "en";
 }
 

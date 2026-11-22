@@ -8,7 +8,7 @@ pub fn smart_target(source: &str, target: &str, last_foreign: &str) -> String {
     }
     if source == "en" {
         if last_foreign.is_empty() || last_foreign == "en" {
-            "de".to_string()
+            "id".to_string()
         } else {
             last_foreign.to_string()
         }
@@ -42,7 +42,7 @@ mod tests {
 
     #[test]
     fn english_without_a_usable_last_target_gets_a_default() {
-        assert_eq!(smart_target("en", "en", ""), "de");
-        assert_eq!(smart_target("en", "en", "en"), "de");
+        assert_eq!(smart_target("en", "en", ""), "id");
+        assert_eq!(smart_target("en", "en", "en"), "id");
     }
 }
